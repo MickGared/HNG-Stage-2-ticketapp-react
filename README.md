@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🎫 Ticket Management Web App (React Version)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **React implementation** of the Ticket Management Web Application challenge.  
+It provides a complete frontend system for managing support tickets — featuring authentication, a responsive dashboard, and full ticket CRUD functionality — all with a clean, consistent UI.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Overview
 
-### `npm start`
+The **Ticket Management App** allows users to:
+- Create, edit, view, and delete support tickets.
+- Log in and sign up securely (simulated authentication).
+- View summary statistics on the dashboard.
+- Toggle between light and dark modes.
+- Stay authenticated using a simulated session token in `localStorage`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This version was built entirely with **React**, following the same design and layout rules required for the React, Vue.js, and Twig implementations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Core Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Landing Page
+- Wavy hero section using **CSS clip-path**.
+- Decorative circles for visual appeal.
+- Responsive max-width layout (1440px).
+- Call-to-action buttons — “Login” and “Get Started”.
+- Consistent footer across all pages.
 
-### `npm run build`
+### 2. Authentication (Login & Signup)
+- Inline form validation (empty fields, password mismatch, etc.).
+- Error and success feedback messages.
+- Stores users and sessions in `localStorage`.
+- Session key: `ticketapp_session`.
+- Redirects unauthorized users to `/auth/login`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Dashboard
+- Displays total, open, and closed ticket counts.
+- Provides navigation links to the Ticket Management screen.
+- Logout button clears session and redirects to the login screen.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. Ticket Management (CRUD)
+- **Create**: Add a new ticket with title, description, and priority.
+- **Read**: Display a list of tickets in card format.
+- **Update**: Edit existing ticket details.
+- **Delete**: Remove a ticket with confirmation.
+- **Status Control**: Toggle between `open → in_progress → closed`.
+- Tickets saved persistently in `localStorage`.
+- Inline validation for required fields.
+- Dark mode toggle for user customization.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧰 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Purpose | Library / Tool |
+|----------|----------------|
+| Framework | React (Vite or CRA) |
+| Styling | CSS Modules / Inline styles |
+| Routing | React Router DOM |
+| State Management | React useState / useEffect |
+| Data Storage | localStorage |
+| Notifications | Inline messages (toasts optional) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Setup & Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
+- Node.js ≥ 16
+- npm or yarn
 
-## Learn More
+### Installation Steps
+```bash
+# 1️⃣ Clone the repository
+git clone <[https://github.com/MickGared/HNG-Stage-2-Task-React.git]>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 2️⃣ Navigate into the React app
+cd ticketapp-react
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 3️⃣ Install dependencies
+npm install
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 4️⃣ Start the development server
+npm start
