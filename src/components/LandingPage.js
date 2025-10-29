@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./LandingPage.css";
-const authorName ="Mick B.";
+
 
 function LandingPage() {
     const navigate = useNavigate();
+    const authorName ="Mick B.";
     return (
         <div className="landing-container">
         {/*Decorative circles */}
@@ -61,3 +62,4 @@ function LandingPage() {
     );
 
 }
+
